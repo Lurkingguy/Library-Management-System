@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Customer_Control">
+   <children>
+      <Label layoutX="157.0" layoutY="53.0" text="Customer">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbCustomer" layoutX="157.0" layoutY="110.0" prefHeight="466.0" prefWidth="615.0">
+         <columns>
+            <TableColumn fx:id="colCusID" prefWidth="184.79998779296875" text="ID" />
+            <TableColumn fx:id="colCusName" prefWidth="232.800048828125" text="Customer Name" />
+            <TableColumn fx:id="colPhone" prefWidth="197.59991455078125" text="Phone Number" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="235.0" layoutY="51.0" prefHeight="24.22" prefWidth="132.03" style="-fx-background-radius: 11.72;" />
+      <AnchorPane prefHeight="600.0" prefWidth="132.0" style="-fx-background-color: #0A2A;" />
+      <Button fx:id="btnSearch" layoutX="385.0" layoutY="52.0" mnemonicParsing="false" onMouseClicked="#SearchClick" prefHeight="24.22" style="-fx-background-radius: 25;" text="Search" />
+      <Button fx:id="btnUpdateCustomer" layoutX="615.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#UpdateCustomerClick" prefHeight="31.0" prefWidth="73.0" style="-fx-background-radius: 25;" text="Update" />
+      <Button fx:id="btnDeleteCustomer" layoutX="702.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#DeleteCustomerClick" prefHeight="31.0" prefWidth="73.0" style="-fx-background-radius: 25;" text="Delete" />
+      <Button fx:id="btnAddCustomer" layoutX="542.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#AddCustomerClick" prefHeight="26.0" prefWidth="55.0" style="-fx-background-radius: 25;" text="Add" />
+      <Label fx:id="staffName" layoutX="27.0" layoutY="25.0" text="staffName">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnDashboard" layoutY="143.0" mnemonicParsing="false" onMouseClicked="#DashboardClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Dashboard">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBorrow" layoutY="229.0" mnemonicParsing="false" onMouseClicked="#BorrowClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Borrow Books">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReturn" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#ReturnClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Return Books">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutY="315.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Customers">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCategory" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#CategoryClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Categories">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLogout" layoutY="551.0" mnemonicParsing="false" onMouseClicked="#LogoutClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #FD5F; -fx-background-radius: 30;" text="Logout">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBook" layoutY="186.0" mnemonicParsing="false" onMouseClicked="#BookClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Books">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="7.0" layoutY="51.0" text="'s DASHBOARD">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

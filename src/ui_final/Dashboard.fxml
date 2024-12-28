@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Dashboard_Control">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="132.0" style="-fx-background-color: #0A2A;">
+         <children>
+            <Label fx:id="staffName" layoutX="30.0" layoutY="38.0" text="staffName">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Button fx:id="btnCategory" layoutX="1.0" layoutY="358.0" mnemonicParsing="false" onMouseClicked="#CategoryClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Categories">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCustomer" layoutX="1.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#CustomerClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Customers">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReturn" layoutX="1.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#ReturnClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Return Books">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBorrow" layoutX="1.0" layoutY="225.0" mnemonicParsing="false" onMouseClicked="#BorrowClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Borrow Books">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBook" layoutX="1.0" layoutY="182.0" mnemonicParsing="false" onMouseClicked="#BookClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Books">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="139.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 30;" text="Dashboard">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="376.0" layoutY="184.0" text="Book Available List">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbAvailableBook" layoutX="172.0" layoutY="234.0" prefHeight="334.0" prefWidth="598.0">
+         <columns>
+            <TableColumn fx:id="colBookID" prefWidth="27.20001220703125" text="ID" />
+            <TableColumn fx:id="colTitle" prefWidth="288.0" text="Title" />
+            <TableColumn fx:id="colAuthor" prefWidth="205.60003662109375" text="Author" />
+            <TableColumn fx:id="colQuantity" prefWidth="75.20004882812498" text="Quantity" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnLogout" layoutY="551.0" mnemonicParsing="false" onMouseClicked="#LogoutClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #FD5F; -fx-background-radius: 30;" text="Logout">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="196.0" layoutY="38.0" text="Total Inventory">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="359.0" layoutY="37.0" text="Total Borrow">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="37.0" text="Total Quantity">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="655.0" layoutY="38.0" text="All Customer">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Circle fill="#e4e002" layoutX="242.0" layoutY="95.0" radius="30.0" stroke="WHITE" strokeType="INSIDE" />
+      <Circle fill="#e4e002" layoutX="400.0" layoutY="94.0" radius="30.0" stroke="WHITE" strokeType="INSIDE" />
+      <Circle fill="#e4e002" layoutX="541.0" layoutY="94.0" radius="30.0" stroke="WHITE" strokeType="INSIDE" />
+      <Circle fill="#e4e002" layoutX="698.0" layoutY="95.0" radius="30.0" stroke="WHITE" strokeType="INSIDE" />
+      <Label fx:id="sumQuantity" layoutX="231.0" layoutY="80.0" text="20">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="sumBorrow" layoutX="389.0" layoutY="79.0" text="20">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="sumInventory" layoutX="530.0" layoutY="79.0" text="20">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="sumCustomer" layoutX="687.0" layoutY="80.0" text="20">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="516.4000244140625" endY="-1.52587890625E-5" layoutX="250.0" layoutY="166.0" startX="-77.0" startY="-1.52587890625E-5" stroke="#365478" />
+      <Label layoutX="8.0" layoutY="65.0" text="'s DASHBOARD">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
